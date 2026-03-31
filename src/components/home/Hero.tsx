@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Container } from "../ui/Container";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -35,12 +36,12 @@ export function Hero() {
               Engineering high-performance websites and custom business platforms for global industry leaders.
             </p>
             <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6">
-              <button className="btn-primary shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+              <Link href="/contact" className="btn-primary shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
                 Book a Consultation
-              </button>
-              <button className="btn-secondary">
+              </Link>
+              <Link href="/work" className="btn-secondary">
                 See Our Work
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

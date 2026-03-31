@@ -13,9 +13,10 @@ const navigation = {
     { name: "Terms of Service", href: "/terms" },
   ],
   social: [
-    { name: "LinkedIn", href: "#" },
-    { name: "Twitter", href: "#" },
-    { name: "GitHub", href: "#" },
+    { name: "LinkedIn", href: "https://linkedin.com/company/zeylun" },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61582428536553&mibextid=wwXIfr" },
+    { name: "X", href: "https://x.com/zeylun" },
+    { name: "GitHub", href: "https://github.com/zeylun" },
   ],
 };
 
