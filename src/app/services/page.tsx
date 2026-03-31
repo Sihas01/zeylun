@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { ArrowRight, Code, Layout, database, Shield, Cpu, Globe } from "lucide-react";
+import { ArrowRight, Code, Layout, Database, Shield, Cpu, Globe } from "lucide-react";
+import { CTASection } from "@/components/home/CTASection";
 
 const services = [
   {
@@ -69,24 +70,11 @@ export default function ServicesPage() {
             </motion.div>
           ))}
         </div>
-
-        {/* Footer CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="mt-32 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 p-12 text-center overflow-hidden relative"
-        >
-          <div className="absolute inset-0 bg-brand-blue/5 blur-[120px] -z-10" />
-          <h2 className="text-3xl font-bold text-white font-sora">Ready to start your project?</h2>
-          <p className="mt-4 text-zinc-400 max-w-xl mx-auto font-light">
-            Contact us today for a free consultation and let's discuss how we can build something amazing together.
-          </p>
-          <div className="mt-10">
-            <button className="btn-primary">Get in Touch</button>
-          </div>
-        </motion.div>
       </Container>
+
+      <div className="mt-32">
+        <CTASection />
+      </div>
     </div>
   );
 }

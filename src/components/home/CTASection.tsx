@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Container } from "../ui/Container";
+import Link from "next/link";
 
 export function CTASection() {
   return (
@@ -26,16 +27,20 @@ export function CTASection() {
               Ready to scale your digital presence or optimize your internal operations? Let's discuss how we can help your business reach its full potential.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 mt-4">
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary shadow-[0_0_30px_rgba(0,112,243,0.3)]"
-              >
-                Book a Consultation
-              </motion.button>
-              <button className="btn-secondary">
-                Contact Our Team
-              </button>
+              <Link href="/contact" className="w-full sm:w-auto">
+                <motion.button 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="btn-primary shadow-[0_0_30px_rgba(0,112,243,0.3)] w-full"
+                >
+                  Book a Consultation
+                </motion.button>
+              </Link>
+              <Link href="/contact" className="w-full sm:w-auto">
+                <button className="btn-secondary w-full">
+                  Contact Our Team
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>
