@@ -24,7 +24,7 @@ const items = [
 
 export function Ecosystem() {
   return (
-    <section id="ecosystem" className="py-24 sm:py-32 bg-zinc-950/30 relative overflow-hidden">
+    <section id="ecosystem" className="py-12 sm:py-32 bg-zinc-950/30 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-blue/5 blur-[120px] -z-10" />
 
       <Container>

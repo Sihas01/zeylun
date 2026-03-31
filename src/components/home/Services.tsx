@@ -29,7 +29,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 sm:py-32 bg-black overflow-hidden relative">
+    <section id="services" className="py-12 sm:py-32 bg-black overflow-hidden relative">
       <div className="absolute inset-0 grid-background opacity-10 -z-10" />
 
       <Container>

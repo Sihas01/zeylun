@@ -28,7 +28,7 @@ const reasons = [
 
 export function WhyZeylun() {
   return (
-    <section id="why-zeylun" className="py-24 sm:py-32 bg-black">
+    <section id="why-zeylun" className="py-12 sm:py-32 bg-black">
       <Container>
         <div className="mx-auto max-w-2xl lg:text-center mb-24">
           <h2 className="text-base font-semibold leading-7 text-brand-blue uppercase tracking-widest">The Zeylun Advantage</h2>

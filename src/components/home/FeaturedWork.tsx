@@ -26,7 +26,7 @@ const projects = [
 
 export function FeaturedWork() {
   return (
-    <section id="work" className="py-24 sm:py-32 bg-black">
+    <section id="work" className="py-12 sm:py-32 bg-black">
       <Container>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">

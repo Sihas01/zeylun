@@ -2,18 +2,24 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zeylun | Digital Products & Scalable Business Systems",
-  description: "Zeylun builds high-performance websites, custom platforms, and scalable digital systems for modern businesses.",
+  metadataBase: new URL("https://zeylun.com"),
+  title: {
+    default: "Zeylun | Digital Products & Scalable Business Systems",
+    template: "%s | Zeylun",
+  },
+  description: "Zeylun engineers high-performance websites, custom business platforms, and scalable digital systems for global industry leaders.",
   keywords: [
     "digital agency",
     "web development",
     "custom software",
     "ERP systems",
     "LMS platforms",
+    "business automation",
+    "premium software development",
     "Sri Lanka software company",
-    "global web development",
+    "global digital consultant",
   ],
-  authors: [{ name: "Zeylun" }],
+  authors: [{ name: "Zeylun", url: "https://zeylun.com" }],
   creator: "Zeylun",
   publisher: "Zeylun",
   formatDetection: {
@@ -23,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Zeylun | Digital Products & Scalable Business Systems",
-    description: "Zeylun builds high-performance websites, custom platforms, and scalable digital systems for modern businesses.",
+    description: "Engineering high-performance websites and custom business platforms for global industry leaders.",
     url: "https://zeylun.com",
     siteName: "Zeylun",
     locale: "en_US",
@@ -33,14 +39,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Zeylun - Digital Products & Scalable Business Systems",
+        alt: "Zeylun - Engineering Digital Excellence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Zeylun | Digital Products & Scalable Business Systems",
-    description: "Zeylun builds high-performance websites, custom platforms, and scalable digital systems for modern businesses.",
+    description: "Engineering high-performance websites and custom business platforms for global industry leaders.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -53,6 +59,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  alternates: {
+    canonical: "https://zeylun.com",
   },
 };
 

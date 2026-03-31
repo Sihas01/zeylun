@@ -5,7 +5,7 @@ import { Container } from "../ui/Container";
 
 export function CTASection() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden bg-black">
+    <section className="py-12 sm:py-32 relative overflow-hidden bg-black">
       {/* Dynamic background beam */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -z-10 h-[600px] w-full max-w-6xl bg-brand-blue/20 blur-[160px] opacity-30 pointer-events-none" />
       <div className="absolute inset-0 grid-background opacity-5 -z-20" />
