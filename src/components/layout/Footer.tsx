@@ -31,40 +31,43 @@ export function Footer() {
             <p className="text-sm leading-6 text-zinc-400 max-w-xs">
               Building high-performance digital systems and products for modern businesses globally.
             </p>
-            <div className="flex space-x-6 text-zinc-500 text-sm">
-              {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="hover:text-white transition-colors">
-                  {item.name}
-                </a>
-              ))}
-            </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.main.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider">Company</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.main.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider">Connect</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.social.map((item) => (
+                  <li key={item.name}>
+                    <a href={item.href} className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white uppercase tracking-wider">Legal</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {navigation.legal.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm leading-6 text-zinc-400 hover:text-white transition-colors">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
