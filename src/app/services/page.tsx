@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { ArrowRight, Code, Layout, database, Shield, Cpu, Globe } from "lucide-react";
+import { ArrowRight, Code, Layout, Database, Shield, Cpu, Globe } from "lucide-react";
+import { CTASection } from "@/components/home/CTASection";
 
 const services = [
   {
@@ -24,6 +25,16 @@ const services = [
     title: "UI/UX Design",
     description: "Premium user interfaces and experiences that delight your customers and strengthen your brand.",
     icon: Layout,
+  },
+  {
+    title: "Data Architecture",
+    description: "Robust database design and management strategies that ensure your data is secure, performant, and reliable.",
+    icon: Database,
+  },
+  {
+    title: "Security & Compliance",
+    description: "Implementing industry-standard security protocols to protect your digital assets and user privacy.",
+    icon: Shield,
   },
 ];
 
@@ -47,7 +58,7 @@ export default function ServicesPage() {
           </p>
         </motion.div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -69,24 +80,11 @@ export default function ServicesPage() {
             </motion.div>
           ))}
         </div>
-
-        {/* Footer CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="mt-32 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 p-12 text-center overflow-hidden relative"
-        >
-          <div className="absolute inset-0 bg-brand-blue/5 blur-[120px] -z-10" />
-          <h2 className="text-3xl font-bold text-white font-sora">Ready to start your project?</h2>
-          <p className="mt-4 text-zinc-400 max-w-xl mx-auto font-light">
-            Contact us today for a free consultation and let's discuss how we can build something amazing together.
-          </p>
-          <div className="mt-10">
-            <button className="btn-primary">Get in Touch</button>
-          </div>
-        </motion.div>
       </Container>
+
+      <div className="mt-12 sm:mt-32">
+        <CTASection />
+      </div>
     </div>
   );
 }
