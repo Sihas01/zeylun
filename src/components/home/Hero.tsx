@@ -8,10 +8,10 @@ export function Hero() {
     <section className="relative overflow-hidden pt-16 pb-20 sm:pt-28 sm:pb-32">
       {/* Background grid */}
       <div className="absolute inset-0 grid-background opacity-20 -z-10" />
-      
+
       {/* Background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -z-10 h-[600px] w-full max-w-6xl premium-glow opacity-40 blur-[130px] pointer-events-none" />
-      
+
       <Container>
         <div className="flex flex-col items-center text-center relative">
           {/* Floating element */}
@@ -45,7 +45,7 @@ export function Hero() {
           </motion.div>
         </div>
       </Container>
-      
+
       {/* Modern line separator */}
       <div className="mt-24 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </section>

@@ -26,10 +26,10 @@ export function Ecosystem() {
   return (
     <section id="ecosystem" className="py-24 sm:py-32 bg-zinc-950/30 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-brand-blue/5 blur-[120px] -z-10" />
-      
+
       <Container>
         <div className="mx-auto max-w-2xl lg:text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-base font-semibold leading-7 text-zinc-500 uppercase tracking-widest"

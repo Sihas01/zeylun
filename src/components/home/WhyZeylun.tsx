@@ -31,7 +31,7 @@ export function WhyZeylun() {
     <section id="why-zeylun" className="py-24 sm:py-32 bg-black">
       <Container>
         <div className="mx-auto max-w-2xl lg:text-center mb-24">
-          <h2 className="text-base font-semibold leading-7 text-white uppercase tracking-widest border-l-4 border-brand-blue pl-4">The Zeylun Advantage</h2>
+          <h2 className="text-base font-semibold leading-7 text-brand-blue uppercase tracking-widest">The Zeylun Advantage</h2>
           <p className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-5xl font-sora">
             Why high-growth companies choose us.
           </p>
