@@ -7,20 +7,20 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Zeylun LMS",
-    description: "A comprehensive learning management system for schools and educators featuring online exams, student management, and payments.",
-    image: "/zeylun-lms.png",
-    category: "EdTech",
-    tags: ["React", "Next.js", "Node.js", "PostgreSQL"],
-    link: "https://lms.zeylun.com",
-  },
-  {
     title: "Joyful Tours",
     description: "Luxury travel and tourism platform showcasing curated travel packages across Sri Lanka.",
     image: "/joyful-tours.png",
     category: "Travel",
     tags: ["React", "Next.js", "Tailwind CSS", "CMS"],
     link: "https://joyfultours.lk",
+  },
+  {
+    title: "Zeylun LMS",
+    description: "A comprehensive learning management system for schools and educators featuring online exams, student management, and payments.",
+    image: "/zeylun-lms.png",
+    category: "EdTech",
+    tags: ["React", "Next.js", "Node.js", "PostgreSQL"],
+    link: "https://app.zeylun.com",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function WorkPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-6 text-xl text-zinc-400 font-light max-w-2xl mx-auto leading-relaxed"
           >
-            A collection of high-performance digital products and systems crafted by Zeylun to solve real-world problems.
+            A curated selection of client projects crafted by Zeylun to solve real-world problems.
           </motion.p>
         </div>
 
