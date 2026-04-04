@@ -78,6 +78,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zeylun.com",
   },
+
+  icons: {
+    icon: [
+      { url: "/og-image.png", type: "image/png" },
+    ],
+    shortcut: "/og-image.png",
+    apple: "/og-image.png",
+  },
 };
 export const viewport: Viewport = {
   themeColor: "#000000",
