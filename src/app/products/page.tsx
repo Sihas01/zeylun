@@ -26,6 +26,15 @@ const products = [
     cta: "Request Demo",
     image: "/outreach-zeylun.png", // Temporarily using available image as placeholder
   },
+  {
+    title: "Zeylun Payroll Management System",
+    description: "A modern payroll management system designed to automate salary processing, employee records, attendance handling, tax calculations, and payroll reporting for businesses of all sizes.",
+    category: "HR & Payroll",
+    tags: ["Payroll Processing", "Employee Management", "Salary Automation", "Reports", "Compliance"],
+    link: "https://payrollpro.zeylun.com",
+    cta: "Request Demo",
+    image: "/payrollpro.PNG", // Temporarily using available image as placeholder
+  },
 ];
 
 export default function ProductsPage() {
