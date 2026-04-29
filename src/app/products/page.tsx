@@ -35,13 +35,22 @@ const products = [
     cta: "Request Demo",
     image: "/payrollpro.PNG", // Temporarily using available image as placeholder
   },
+  {
+    title: "Zeylun Automate",
+    description: "An AI-powered messaging and lead automation system that handles customer inquiries, follow-ups, and CRM tracking across WhatsApp, Instagram, and Email — so your team can focus on closing, not chasing.",
+    category: "AI Automation",
+    tags: ["WhatsApp Automation", "AI Messaging", "Lead Management", "Multi-channel"],
+    link: "https://automate.zeylun.com",
+    cta: "View Plans",
+    image: "/automate-zeylun.png",
+  }
 ];
 
 export default function ProductsPage() {
   return (
     <div className="relative min-h-screen pt-32 pb-20 overflow-hidden">
       <div className="absolute inset-0 grid-background opacity-10 -z-10" />
-      
+
       <Container>
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
@@ -80,7 +89,7 @@ export default function ProductsPage() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                    <Link 
+                    <Link
                       href={product.link}
                       className="btn-primary !px-6 !py-2 text-sm flex items-center"
                       {...(product.link.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
@@ -89,7 +98,7 @@ export default function ProductsPage() {
                     </Link>
                   </div>
                 </div>
-                
+
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-6">
                     <span className="px-3 py-1 text-xs font-medium text-brand-blue bg-brand-blue/10 rounded-full uppercase tracking-wider">
@@ -100,7 +109,7 @@ export default function ProductsPage() {
                   <p className="text-zinc-400 font-light text-base mb-8 flex-grow leading-relaxed">
                     {product.description}
                   </p>
-                  
+
                   <div className="mt-auto">
                     <div className="flex flex-wrap gap-2 mb-2">
                       {product.tags.map(tag => (
@@ -116,7 +125,7 @@ export default function ProductsPage() {
           ))}
         </div>
       </Container>
-      
+
       <div className="mt-32">
         <CTASection />
       </div>
