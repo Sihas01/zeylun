@@ -42,7 +42,7 @@ const products = [
     tags: ["WhatsApp Automation", "AI Messaging", "Lead Management", "Multi-channel"],
     link: "https://automate.zeylun.com",
     cta: "View Plans",
-    image: "/automate-zeylun.png",
+    image: "/automate-zeylun.PNG",
   }
 ];
 
