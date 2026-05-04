@@ -1,49 +1,69 @@
 import { NextResponse } from 'next/server';
-// You'll need to install: npm install resend
-// import { Resend } from 'resend';
 
-// const resend = new Resend(process.env.RESEND_API_KEY);
+const RESEND_API_URL = 'https://api.resend.com/emails';
+const CONTACT_EMAIL = 'hello@zeylun.com';
+
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
 
 export async function POST(request: Request) {
   try {
     const { name, email, subject, message } = await request.json();
 
-    // 1. Logic for sending via Resend (Recommended)
-    /*
-    const { data, error } = await resend.emails.send({
-      from: 'Zeylun <onboarding@resend.dev>', // Update to your verified domain later
-      to: ['info@zeylun.com'],
-      reply_to: email,
-      subject: `[Zeylun Contact] ${subject}: From ${name}`,
-      text: `From: ${name} (${email})\n\nMessage:\n${message}`,
-    });
-
-    if (error) {
-      return NextResponse.json({ error }, { status: 400 });
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json({ error: 'Email service is not configured' }, { status: 500 });
     }
-    */
 
-    // 2. Logic for sending via Nodemailer (Alternate)
-    /*
-    import nodemailer from 'nodemailer';
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+    if (
+      typeof name !== 'string' ||
+      typeof email !== 'string' ||
+      typeof subject !== 'string' ||
+      typeof message !== 'string' ||
+      !name.trim() ||
+      !email.trim() ||
+      !subject.trim() ||
+      !message.trim()
+    ) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    }
+
+    const safeName = escapeHtml(name.trim());
+    const safeEmail = escapeHtml(email.trim());
+    const safeSubject = escapeHtml(subject.trim());
+    const safeMessage = escapeHtml(message.trim()).replace(/\n/g, '<br />');
+
+    const resendResponse = await fetch(RESEND_API_URL, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
       },
+      body: JSON.stringify({
+        from: 'Zeylun <onboarding@resend.dev>',
+        to: CONTACT_EMAIL,
+        reply_to: email.trim(),
+        subject: `[Zeylun Contact] ${subject.trim()}`,
+        html: `
+          <p><strong>Name:</strong> ${safeName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
+          <p><strong>Subject:</strong> ${safeSubject}</p>
+          <p><strong>Message:</strong></p>
+          <p>${safeMessage}</p>
+        `,
+      }),
     });
 
-    await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: "info@zeylun.com",
-      subject: `[New Inquiry] ${subject}`,
-      text: message,
-    });
-    */
-
-    console.log('Simulated email sent to info@zeylun.com:', { name, email, subject, message });
+    if (!resendResponse.ok) {
+      const error = await resendResponse.json().catch(() => null);
+      console.error('Resend API Error:', error);
+      return NextResponse.json({ error: 'Failed to send email' }, { status: 502 });
+    }
 
     return NextResponse.json({ success: true, message: 'Email sent successfully' });
   } catch (error) {

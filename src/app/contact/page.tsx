@@ -36,7 +36,7 @@ export default function ContactPage() {
       setIsSuccess(true);
     } catch (error) {
       console.error("Submission failed", error);
-      alert("Something went wrong. Please email us directly at info@zeylun.com");
+      alert("Something went wrong. Please email us directly at hello@zeylun.com");
     } finally {
       setIsSubmitting(false);
     }
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Email Us</h3>
-                  <p className="text-zinc-400 mt-1">info@zeylun.com</p>
+                  <p className="text-zinc-400 mt-1">hello@zeylun.com</p>
                 </div>
               </div>
 
@@ -100,7 +100,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white font-sora">Message Sent!</h3>
                 <p className="text-zinc-400 mt-4">
-                  Thank you for reaching out. We'll get back to you at info@zeylun.com very soon.
+                  Thank you for reaching out. We'll get back to you at hello@zeylun.com very soon.
                 </p>
                 <button
                   onClick={() => setIsSuccess(false)}
@@ -172,7 +172,7 @@ export default function ContactPage() {
                 </button>
 
                 <p className="text-xs text-zinc-500 text-center mt-4">
-                  By submitting this form, you agree to our privacy policy and we'll respond via <b>info@zeylun.com</b>.
+                  By submitting this form, you agree to our privacy policy and we'll respond via <b>hello@zeylun.com</b>.
                 </p>
               </form>
             )}
