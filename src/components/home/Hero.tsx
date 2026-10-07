@@ -39,7 +39,7 @@ export function Hero() {
               <Link href="/contact" className="btn-primary shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
                 Book a Consultation
               </Link>
-              <Link href="/work" className="btn-secondary">
+              <Link href="/products" className="btn-secondary">
                 See Our Work
               </Link>
             </div>
