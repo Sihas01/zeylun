@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { AnnouncementTicker } from "@/components/layout/AnnouncementTicker";
 import { Navbar } from "@/components/layout/Navbar";
+import { ContactSection } from "@/components/layout/ContactSection";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -101,10 +103,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth selection:bg-brand-blue selection:text-white">
       <body className="bg-black text-white antialiased min-h-screen flex flex-col font-inter">
+        <AnnouncementTicker />
         <Navbar />
         <main className="flex-grow">
           {children}
         </main>
+        <ContactSection />
         <Footer />
       </body>
     </html>

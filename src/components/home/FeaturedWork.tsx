@@ -15,12 +15,12 @@ const projects = [
     image: "/joyful-tours.png",
   },
   {
-    title: "Zeylun LMS",
-    category: "Learning Management System",
-    description: "A comprehensive academic platform handling complex course structures, live student schedules, and lecturer management systems.",
-    color: "from-brand-blue/20 to-purple-600/20",
-    href: "https://app.zeylun.com",
-    image: "/zeylun-lms.png",
+    title: "TaxSafe",
+    category: "VAT Compliance SaaS",
+    description: "A VAT compliance platform designed to help businesses manage VAT invoices, purchases, credit and debit notes, and VAT reporting through a structured digital workflow.",
+    color: "from-emerald-600/20 to-teal-600/20",
+    href: "https://taxsafe.lk/",
+    image: "/taxsafe.png",
   },
 ];
 

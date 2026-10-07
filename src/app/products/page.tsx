@@ -9,6 +9,42 @@ import { CTASection } from "@/components/home/CTASection";
 
 const products = [
   {
+    title: "TaxSafe",
+    description: "A VAT compliance platform designed to help businesses manage VAT invoices, purchases, credit and debit notes, and VAT reporting through a structured digital workflow.",
+    category: "VAT Compliance SaaS",
+    tags: ["VAT Invoices", "Purchases", "Credit & Debit Notes", "VAT Reporting"],
+    link: "https://taxsafe.lk/",
+    cta: "View Product",
+    image: "/taxsafe.png",
+  },
+  {
+    title: "DriveDesk",
+    description: "A vehicle rental management platform designed to help rental businesses manage vehicles, bookings, customers, and day-to-day rental operations from one connected system.",
+    category: "Vehicle Rental Management Platform",
+    tags: ["Vehicles", "Bookings", "Customers", "Rental Operations"],
+    link: "https://drivedesk.zeylun.com/",
+    cta: "View Product",
+    image: "/drivedesk.png",
+  },
+  {
+    title: "Operations ERP",
+    description: "An operations-focused ERP system designed to centralise business workflows, operational data, and day-to-day management into one connected platform.",
+    category: "Business Operations System",
+    tags: ["Business Workflows", "Operational Data", "Daily Management", "Connected Platform"],
+    link: "https://zeylun-operations.netlify.app/",
+    cta: "View Product",
+    image: "/operations-erp.png",
+  },
+  {
+    title: "Zeylun Hospitality",
+    description: "A hospitality technology solution connecting guest acquisition, direct bookings, guest communication, operational workflows, and reporting into one connected ecosystem.",
+    category: "Hospitality Technology",
+    tags: ["Guest Acquisition", "Direct Bookings", "Guest Communication", "Operations & Reporting"],
+    link: "https://hospitality.zeylun.com/",
+    cta: "Explore Solution",
+    image: "/zeylun-hospitality.png",
+  },
+  {
     title: "Zeylun LMS",
     description: "A modern learning management system designed for tutors, educational businesses, and training providers to manage classes, students, learning content, and growth.",
     category: "EdTech",

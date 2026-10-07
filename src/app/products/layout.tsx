@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Zeylun Products | LMS & Outreach Systems",
-  description: "Explore Zeylun products including Zeylun LMS and Zeylun Outreach System, built to help businesses and educational providers operate more efficiently.",
+  title: "Zeylun Products | Business Software & Digital Systems",
+  description: "Explore software products and industry solutions built by Zeylun to help businesses manage operations, compliance, customers, and growth.",
 };
 
 export default function ProductsLayout({

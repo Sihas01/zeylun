@@ -80,7 +80,20 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">Call Us</h3>
-                  <a href="tel:+94 740311733" className="text-zinc-400 mt-1 hover:text-white transition-colors">+94 74 031 1733</a>
+                  <div className="mt-2 space-y-2">
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">Sri Lanka</p>
+                      <a href="tel:+94740311733" className="mt-0.5 inline-block text-zinc-400 transition-colors hover:text-white">
+                        +94 0740311733
+                      </a>
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">United Kingdom</p>
+                      <a href="tel:+447471359197" className="mt-0.5 inline-block text-zinc-400 transition-colors hover:text-white">
+                        +44 7471359197
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
